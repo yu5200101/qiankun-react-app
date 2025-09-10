@@ -26,6 +26,7 @@ renderWithQiankun({
   mount(props) {
     props.onGlobalStateChange((state: GlobalState, prev: GlobalState) => {
       console.log('子应用收到状态变更：', state.theme);
+      console.log(prev, 'prev')
     }, true); // true 表示立即触发一次回调
     props.setGlobalState({ theme: 'dark' });
     props.offGlobalStateChange();
