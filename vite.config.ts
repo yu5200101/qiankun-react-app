@@ -21,6 +21,6 @@ export default defineConfig(({ mode }) => {
       cors: true, // 允许跨域
       headers: { 'Access-Control-Allow-Origin': '*' }
     },
-    base: process.env.NODE_ENV === 'production' ? `${env.VITE_BACKEND_URL}/react` : '/' // 使用 loadEnv 加载的变量
+    base: process.env.NODE_ENV === 'production' ? env.VITE_BACKEND_URL : '/' // 使用 loadEnv 加载的变量
   }
 })
