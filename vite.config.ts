@@ -16,5 +16,6 @@ export default defineConfig({
     port: 3001,
     cors: true, // 允许跨域
     headers: { 'Access-Control-Allow-Origin': '*' }
-  }
+  },
+  base: process.env.NODE_ENV === 'production' ? import.meta.env.VITE_BACKEND_URL : '/' // 生产环境需固定base
 });
