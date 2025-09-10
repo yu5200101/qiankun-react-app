@@ -9,6 +9,6 @@ const router = createBrowserRouter([
     path: '/',
     Component: App
   }],
-  {basename: qiankunWindow.__POWERED_BY_QIANKUN__ ? '/subapp' : '/'}
+  {basename: qiankunWindow.__POWERED_BY_QIANKUN__ ? '/subapp/react' : '/'}
 )
 export default router
